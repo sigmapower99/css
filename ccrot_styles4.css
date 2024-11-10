@@ -1,0 +1,96 @@
+body {
+  font-family: 'Roboto', sans-serif; /* Menggunakan font sans-serif dari Google Fonts */
+  margin: 0;
+  padding: 0;
+  background-color: #222; /* Warna latar belakang yang lebih gelap */
+  color: #fff; /* Warna teks */
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold; /* Membuat judul menjadi tebal */
+  color: #fff; /* Warna teks judul */
+  text-decoration: none; /* Menghapus garis bawah dari tautan judul */
+  display: inline-block; /* Membuat tautan judul menempati satu baris penuh */
+  transition: transform 0.2s ease; /* Animasi saat hover */
+}
+
+.title:hover {
+  transform: scale(1.05); /* Membuat judul membesar saat dihover */
+}
+
+.image-container {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto 20px; /* Menambahkan jarak bawah antara gambar dan judul */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.image-container img {
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.icon {
+  font-size: 3rem;
+  color: #fff;
+  margin: 0 10px;
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+.button {
+  background-color: #ff0000; /* Warna latar belakang tombol (merah) */
+  color: #fff; /* Warna teks tombol (putih) */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 20px;
+  font-size: 1rem;
+  font-weight: bold; /* Membuat teks tombol menjadi tebal */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Animasi warna latar belakang dan transform */
+  display: inline-block; /* Membuat tombol menempati ruang sesuai kontennya */
+  text-decoration: none; /* Menghapus garis bawah dari tombol */
+}
+
+.button:hover {
+  background-color: #ff3333; /* Warna tombol saat hover */
+  transform: scale(1.05); /* Membuat tombol membesar saat dihover */
+}
+
+/* Responsif untuk tampilan mobile */
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 1.5rem;
+  }
+}
